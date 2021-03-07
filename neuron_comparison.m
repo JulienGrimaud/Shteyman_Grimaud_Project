@@ -11,9 +11,9 @@ function [RsqAll] = neuron_comparison(mouseList,sideList,A,C)
 %two given odors. For example, RsqAll(15,8) is the R-Squared value for
 %odors 15 and 8
 %
-[respMean,respBool] = calculate_mean_response(mouseList,sideList,A,C); %Runs the calculate mean response function
+[respMean,respBool] = calculate_mean_response(mouseList,sideList,A,C);
 
-RsqAll = zeros([15,15]);%Establishes a 
+RsqAll = zeros([15,15]);
 
 for odor1 = 1:15
     for odor2 = 1:15

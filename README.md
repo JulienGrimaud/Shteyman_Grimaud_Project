@@ -6,11 +6,11 @@ This folder contains all the Matlab code necessary to replicate the results of t
 The purpose of this code is to analyze the correlation between neuronal population response and odor similarity in the olfactory cortex of mice. Each script comes with comments that should help you implement your own research, and better understand the script. Here is a quick overview of the different scripts:
    - fitlm_custom: Performs linear regressions.
    - calculate_mean_response: Calculates the mean neuronal response from extracellular recording data.
-   - odor_similarity: Generates an odor feature similarity matrix from a table of odor features.
-   - neuron_comparison: Generates a neuron response similarity matrix.
+   - odor_similarity: Generates the odor feature similarity matrix from a table of odor features.
+   - neuron_comparison: Generates the neuron response similarity matrix.
    - odor_neuron_similarity: Compares the odor similarity matrix and the neuron response similarity matrix generated with the code mentioned above.
 
-The neuronal recording data used for this project comes from the following article: Grimaud J. et al (2020), "Bilateral Alignment of Receptive Fields in the Olfactory Cortex Points to Non-Random Connectivity. BioRXiv", doi: https://doi.org/10.1101/2020.02.24.960922. The data may be downloaded directly from the article's GitHub repository: https://github.com/VNMurthyLab/IpsiContra
+The neuronal recording data used for this project comes from the following article: Grimaud J. et al (2020), "Bilateral Alignment of Receptive Fields in the Olfactory Cortex Points to Non-Random Connectivity. BioRXiv", doi: https://doi.org/10.1101/2020.02.24.960922. The data may be downloaded directly from the article's GitHub repository: https://github.com/VNMurthyLab/IpsiContra (file name : tetrodeRecordings_OC_2s.mat).
 
 The odor feature table was generated using data from two sources:
    - The chemical composition of the odorants was found on PubChem at https://pubchem.ncbi.nlm.nih.gov/

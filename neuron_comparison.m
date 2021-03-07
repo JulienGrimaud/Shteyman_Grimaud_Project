@@ -11,7 +11,6 @@ function [RsqAll] = neuron_comparison(mouseList,sideList,A,C)
 %two given odors. For example, RsqAll(15,8) is the R-Squared value for
 %odors 15 and 8
 %
-%Note:This requires either the fitlm calculate mean response functions.
 [respMean,respBool] = calculate_mean_response(mouseList,sideList,A,C); %Runs the calculate mean response function
 
 RsqAll = zeros([15,15]);%Establishes a 

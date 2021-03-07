@@ -3,7 +3,7 @@ This folder contains all the Matlab code necessary to replicate the results of t
    - Gary Shteyman (Staten Island Technical High School, Staten Island, NY, USA)
    - Dr. Julien Grimaud (Institut Supérieur des Biotechnologies de Paris, Villejuif, France).
 
-The purpose of this code is to analyze the correlation between neuronal population response and odor similarity in the olfactory cortex of mice. Each script comes with comments that should help you implement your own research, and better understand the script. Here is a quick overview of the different scripts:
+The purpose of this code is to analyze the correlation between neuronal population response and odor similarity in the olfactory cortex of mice. Each script and function comes with comments that should help you implement your own research, and better understand the script. Here is a quick overview of the different scripts and functions:
    - fitlm_custom: Performs linear regressions.
    - calculate_mean_response: Calculates the mean neuronal response from extracellular recording data.
    - odor_similarity: Generates the odor feature similarity matrix from a table of odor features.
@@ -12,6 +12,4 @@ The purpose of this code is to analyze the correlation between neuronal populati
 
 The neuronal recording data used for this project comes from the following article: Grimaud J. et al (2020), "Bilateral Alignment of Receptive Fields in the Olfactory Cortex Points to Non-Random Connectivity. BioRXiv", doi: https://doi.org/10.1101/2020.02.24.960922. The data may be downloaded directly from the article's GitHub repository: https://github.com/VNMurthyLab/IpsiContra (file name : tetrodeRecordings_OC_2s.mat).
 
-The odor feature table was generated using data from two sources:
-   - The chemical composition of the odorants was found on PubChem at https://pubchem.ncbi.nlm.nih.gov/
-   - The flavor category and irritant status were found in the Good Scent Company’s public database at http://www.thegoodscentscompany.com/
+The odor feature table was generated using data from two sources. The chemical composition of the odorants was found on PubChem at https://pubchem.ncbi.nlm.nih.gov/. The flavor category and irritant status were found in the Good Scent Company’s public database at http://www.thegoodscentscompany.com/

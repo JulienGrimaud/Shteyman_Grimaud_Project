@@ -1,45 +1,41 @@
 function OdorSimilarity = odor_similarity(D)
 %This function finds the total number of similarities between any 2 given
-%odors.
+%odors, then generate an odor similarity matrix.
 %
 %Input:
-%D is a 2D matrix that has number values in it. In the example below, D is
-%comparing 15 odors with 15 true/false statements, such as the inclusion of
-%a functional group or an irritant label.
+%D is a 2D matrix that represents various odors and their features. Each
+%line is an odor, each column is a feature.
 %
 %Output: 
 %OdorSimilarity is a 2D matrix, wherein each value is the number of shared
-%values between any two given odors. For example, OdorSimilarity(3,4) is
-%the amount of true/false answers that odors 3 and 4 have in common.
-%
-%Note: In the example below D is a 15-by-15 matrix
-%
-%Establishes that OdorSimilarity will end up being a 15-by-15 matrix
-OdorSimilarity = zeros([15 15]);
+%features between any two given odors. For example, OdorSimilarity(3,4) is
+%the amount of features that odors 3 and 4 have in common.
 
-%Establishes line1 and line2 as any given lines in the input matrix
-for line1 = 1:15
-    for line2 = 1:15
-        %Establishes D1 and D2 as any given lines in D
-        D1 = D(line1,:);
-        D2 = D(line2,:);
-        %Counts the number of columns in D, and sets a counter of 0
-        totalNbColumns = size(D,2);
-        counter = 0;
-        %If D1 and D2 share a value in the same column, increase the
-        %counter by 1
-        for column = 1:totalNbColumns
-            if D1(column) == D2(column)
+s = size(D);
+%s(1) is the number of odors in D, s(2) is the number of odor features.
+
+OdorSimilarity = zeros([s(2),s(2)]);
+
+for odor1 = 1:s(1) 
+    for odor2 = 1:s(1) %for all pairs of odors from D
+        
+        D1 = D(odor1,:); %D1 contains all the odor features of odor1
+        D2 = D(odor2,:); %D2 contains all the odor features of odor2
+        
+
+        counter = 0;        
+        %The loop below compares the values of D1 and D2 one by one.
+        %Every time D1 and D2 share a feature, we add 1 to the counter.
+        for feature = 1:s(2)
+            if D1(feature) == D2(feature)
                 counter = counter+1;
             end
         end
-        % Alternate way of writing the above for loop:size(find(D1==D2),2)
-        %Fills in OdorSimilarity with every combination of counter sums
-        OdorSimilarity(line1,line2) = counter;
+
+        OdorSimilarity(odor1,odor2) = counter;
         
     end
 end
-%Displays OdorSimilarity on a color scale
 
 end
 

@@ -1,6 +1,7 @@
 # Shteyman_Grimaud_Project
 This folder contains all the Matlab code necessary to replicate the results of the research project "Odorant Composition and Neuronal Response". This project was submitted to the 2020-2021 New York City Science and Engineering Fair (NYCSEF). The authors are:
    - Gary Shteyman (Staten Island Technical High School, Staten Island, NY, USA)
+   - Dr. John Alan Davis (Staten Island Technical High School, Staten Island, NY, USA)
    - Dr. Julien Grimaud (Institut Supérieur des Biotechnologies de Paris, Villejuif, France).
 
 The purpose of this code is to analyze the correlation between neuronal population response and odor similarity in the olfactory cortex of mice. Each script and function comes with comments that should help you implement your own research, and better understand the script. Here is a quick overview of the different scripts, functions, and variables:

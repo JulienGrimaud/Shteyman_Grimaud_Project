@@ -2,8 +2,8 @@ function [RsqAll] = neuron_comparison(mouseList,sideList,A,C)
 %This code calculates the R-Squared values for every combination of odors
 %
 %Inputs:
-%  - mouseList is a 1-D matrix containing a list of mice (from 1 to 10).
-%  - sideList is a 1-D matrix containing a list of sides (from 1 to 2).
+%  - mouse is the mouse #. 
+%  - sidelist is the side #.
 %  - A and C are the data matrices from tetrodeRecordings_OC_2s.mat.
 %
 %Output:

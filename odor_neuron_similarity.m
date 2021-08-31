@@ -1,21 +1,16 @@
+function odor_neuron_similarity(mouseList,sideList)
 %This code compares mean neuronal responses with a seperate odor similarity
 %matrix.
-load('Data.mat')
-%This loads a variety of functions, including
-%fitlm,calculate_mean_response,neuron_comparison,and odor_similarity. In
-%particular, the variables that are of interest are RsqAll, which is a 15x15 matrix of the
-%R-squared values of every neuron response, and OdorSimilarity, a 15 by 15
-%matrix of the similarity scores of each odor.
 
-%Here you can change the inputs (what side, what mouse), as well as
-%establish an empty variable RsqEach.
-sideList=2;
+load('odor_feature_table.mat')
+load('tetrodeRecordings_OC_2s.mat')
+
 RsqEach=[];
 figure
-for mouseList=1:10
+for mouse=mouseList
     %Runs the neuron_comparison function, and also restructures RsqAll into 1
     %line
-    [RsqAll] = neuron_comparison(mouseList,sideList,A,C);
+    [RsqAll] = neuron_comparison(mouse,sideList,A,C);
     OdorSimilarity = odor_similarity(D);
     neuronSimilarityMatrix = triu(RsqAll,1);
     neuronSimilarityMatrix = reshape(neuronSimilarityMatrix,15*15,1);
@@ -28,12 +23,12 @@ for mouseList=1:10
     odorSimilarityMatrix=reshape(odorSimilarityMatrix,[1,105]);
     %Finds the slope, intercept, and R-squared value for the graph
     [m,b,Rsq2]=fitlm_custom(neuronSimilarityMatrix,odorSimilarityMatrix);
-    RsqEach(mouseList,1)=Rsq2;
+    RsqEach(mouse,1)=Rsq2;
     %Plotting the graph-this can be catered to anything you are looking for
     %(each individual mouse, different sides, etc)
-    subplot(2,5,mouseList)
+    subplot(2,5,mouse)
     title(['R-Squared value is',num2str(Rsq2)])
-    xlabel({'Odor-Odor neuron comparison','Mouse #',num2str(mouseList)})
+    xlabel({'Odor-Odor neuron comparison','Mouse #',num2str(mouse)})
     xlim([0 0.8])
     ylabel('Odor-Odor similarity matrix sums','FontSize',6)
     hold on

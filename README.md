@@ -9,7 +9,10 @@ The purpose of this code is to analyze the correlation between neuronal populati
    - odor_similarity: Generates the odor feature similarity matrix from a table of odor features.
    - neuron_comparison: Generates the neuron response similarity matrix.
    - odor_neuron_similarity: Compares the odor similarity matrix and the neuron response similarity matrix generated with the code mentioned above.
+   - plot_indiv_od_od_regression: Plots exemplar regressions to compare the response of a neuron population to one odor versus the other.
+   - calculate_response_variance: Compute neuronal response variance across repeats.
    - odor_feature_table.mat: This variable contains the odor feature table used in our study (see below).
+   - generate_all_figures: Calls all the functions and variables mentioned above and generates all figures from the manuscript summarizing our results.
 
 The neuronal recording data used for this project comes from the following article: Grimaud J. et al (2020), "Bilateral Alignment of Receptive Fields in the Olfactory Cortex Points to Non-Random Connectivity. BioRXiv", doi: https://doi.org/10.1101/2020.02.24.960922. The data may be downloaded directly from the article's GitHub repository: https://github.com/VNMurthyLab/IpsiContra (file name : tetrodeRecordings_OC_2s.mat).
 

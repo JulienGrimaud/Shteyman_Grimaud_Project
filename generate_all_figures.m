@@ -19,7 +19,7 @@ subplot(1,2,2)
 imagesc(NeuronRespSimilarity)
 axis square
 
-%FIGURE 2B
+%FIGURE 3B
 figure
 N = [];
 for mouseList = 1:10
@@ -40,20 +40,20 @@ for mouseList = 1:10
     N = [N M];
 end
 
-%FIGURE 2C
+%FIGURE 3C
 figure
 hold on
 for i = 1:210
     plot(sort(N(i,:)), 'Color','k')
 end
 
-%FIGURE 3
+%FIGURE 4
 %Odor similarity versus neuronal response similarity
 mouseList = 1:10;
 sideList = 1;
 odor_neuron_similarity(mouseList,sideList)
 
-%SUPPL FIGURE 1
+%FIGURE 2
 %Variance across repeats for each odor, each region
 sideList = 1;
 regionOfEachMouse = [1 1 1 2 2 2 2 3 3 3];
@@ -82,7 +82,7 @@ for region = 1:3
     ylim([0 1])
 end
 
-%FIGURE 2A
+%FIGURE 3A
 %Individual regressions
 mouse = 1;
 sideList = 1;
